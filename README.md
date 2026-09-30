@@ -5,7 +5,9 @@ This workspace contains two packages:
 - `packages/ebnf-lab`: the public `ebnf-lab` npm package with the grammar engine and React/Monaco editor.
 - `packages/site`: a standalone site shell with sharing, theme, and notification controls.
 
-The `site` package is available at [https://thomasgassmann.github.io/ebnf-lab/](https://thomasgassmann.github.io/ebnf-lab/).
+The `site` package is available at [thomasgassmann.github.io/ebnf-lab/](https://thomasgassmann.github.io/ebnf-lab/).
+
+The `ebnf-lab` package is used as a library in [thomasgassmann.com/ebnf](https://www.thomasgassmann.com/ebnf). Blog post and change log are currently still served [over there](https://www.thomasgassmann.com/blog/ebnf-lab).
 
 ## Develop
 
