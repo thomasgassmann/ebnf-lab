@@ -29,7 +29,7 @@ jobs:
         run: node -e "const version=require('./packages/ebnf-lab/package.json').version; if (process.env.RELEASE_TAG !== 'v'+version) process.exit(1)"
       - name: Publish ebnf-lab
         working-directory: packages/ebnf-lab
-        # provenance needs id-token: write (granted above) and a supported Node
-        run: npm publish --access public --provenance
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        # Authenticates via OIDC using the trusted publisher configured on
+        # npmjs.com; no NPM_TOKEN secret. Provenance is generated
+        # automatically.
+        run: npm publish --access public
